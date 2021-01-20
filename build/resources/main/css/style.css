@@ -1,0 +1,58 @@
+.styled-text-area {
+    -fx-font-size: 18;
+    -fx-background-color: rgba(28, 16, 31, 0.8);
+}
+
+.styled-text-area .caret {
+    -fx-stroke: white;
+}
+
+.styled-text-area .text{
+    -fx-fill:white;
+}
+
+.styled-text-area .line {
+    -fx-fill: black;
+}
+
+.styled-text-area .text.assignment {
+    -fx-fill: orange;
+    -fx-font-weight: bold;
+}
+
+.styled-text-area .text.command {
+    -fx-fill: rgb(110, 252, 187);
+    -fx-font-weight: bold;
+}
+
+.styled-text-area .text.semicolon {
+    -fx-fill: rgb(110, 252, 187);
+    -fx-font-weight: bold;
+}
+
+.styled-text-area .text.argument {
+    -fx-fill: #306e6b;
+    -fx-font-weight: bold;
+}
+
+.styled-text-area .text.bracket {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.styled-text-area .text.brace {
+    -fx-fill: yellow;
+    -fx-font-weight: bold;
+}
+
+.styled-text-area .text.string {
+    -fx-fill: rgb(58,213,11);
+}
+
+.styled-text-area .text.chevron {
+    -fx-fill: rgb(0, 200, 255);
+}
+
+.paragraph-box:has-caret{
+    -fx-background-color: rgba(50, 77, 101, 0.1);
+}
