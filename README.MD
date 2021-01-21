@@ -65,4 +65,4 @@ Download last release : [Download link (empty)](#)
 ## License
 
  
-This project is on ``GPL-3 `` - See the [LICENCE.MD](https://github.com/Arinonia/Launcher_Valkyria/LICENCE.MD) file for more information.
+This project is on ``GPL-3 `` - See the [LICENCE.MD](https://github.com/Ordinal-Team/Terminal/blob/main/LICENCE) file for more information.
