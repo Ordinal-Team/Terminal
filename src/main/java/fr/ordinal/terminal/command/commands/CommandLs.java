@@ -37,10 +37,16 @@ public class CommandLs extends Command {
                     }
                 }
             } else if(argument.equalsIgnoreCase("l")) {
+                int nameLength = 0;
                 for (File files : Objects.requireNonNull(terminal.getCurrentFile().listFiles())) {
-
-                    area.replaceText(area.getText() + files.getName() + this.getPermissionFromFile(files) + "\n");
+                    if (nameLength < files.getName().length()) {
+                            nameLength = files.getName().length();
+                    }
                 }
+                for (File files : Objects.requireNonNull(terminal.getCurrentFile().listFiles())) {
+                        area.replaceText(area.getText() + files.getName() + this.getPermissionFromFile(files, nameLength) + "\n");
+                }
+
             } else {
                 if (argument.isEmpty()) {
                     area.replaceText(area.getText() + argument + " write argument please.\n");
@@ -55,25 +61,30 @@ public class CommandLs extends Command {
         }
     }
 
-    private String getPermissionFromFile(File file) {
+    private String getPermissionFromFile(File file, int space) {
         StringBuilder builder = new StringBuilder();
-        builder.append(" : Read");
+        for (int i = 0; i < space - file.getName().length() + 3; i++) {
+            builder.append(" ");
+        }
+        if (file.isDirectory()) {
+            builder.append("d");
+        } else {
+            builder.append("-");
+        }
         if (file.canRead()) {
-            builder.append("=true ");
+            builder.append("r");
         } else {
-            builder.append("=false ");
+            builder.append("-");
         }
-        builder.append("Write");
         if (file.canWrite()) {
-            builder.append("=true ");
+            builder.append("w");
         } else {
-            builder.append("=false ");
+            builder.append("-");
         }
-        builder.append("Execute");
         if (file.canExecute()) {
-            builder.append("=true ");
+            builder.append("e ");
         } else {
-            builder.append("=false ");
+            builder.append("- ");
         }
         return builder.toString();
     }

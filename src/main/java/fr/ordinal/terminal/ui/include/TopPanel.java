@@ -65,4 +65,7 @@ public class TopPanel extends GridPane {
         topBarButton.getChildren().addAll(close, fullscreen, hide);
     }
 
+    public PanelManager getPanelManager() {
+        return panelManager;
+    }
 }
