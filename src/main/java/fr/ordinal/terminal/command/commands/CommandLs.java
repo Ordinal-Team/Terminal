@@ -11,13 +11,13 @@ public class CommandLs extends Command {
 
 
     public CommandLs(Terminal terminal) {
-        super("ls", "List file or directory (args --d for only folder, --f for only file, --a for only hidden file,\n--l for see permissions).", terminal);
+        super("ls", "List file or directory (args -d for only folder, -f for only file, -a for only hidden file,\n-l for see permissions).", terminal);
     }
 
     @Override
     public void process(CodeArea area, String[] args) {
         if (args.length >= 2 ) {
-            String argument = args[1].replace("--", "");
+            String argument = args[1].replace("-", "");
             if (argument.equalsIgnoreCase("f")) {
                 for (File files : Objects.requireNonNull(terminal.getCurrentFile().listFiles())) {
                     if (files.isFile()) {

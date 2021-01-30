@@ -4,6 +4,7 @@ import fr.ordinal.terminal.Terminal;
 import fr.ordinal.terminal.ui.panel.TabTerminal;
 import fr.ordinal.terminal.utils.Constants;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
@@ -13,7 +14,7 @@ public class PanelManager {
     private final Terminal terminal;
     private final Stage stage;
 
-    private GridPane centerPanel = new GridPane();
+    private AnchorPane centerPanel = new AnchorPane();
 
     private GridPane layout;
 
@@ -48,7 +49,7 @@ public class PanelManager {
     private  String setResponsiveBackground(String url) {
         return "-fx-background-image: url('"+url+"');"
                 +"-fx-backgound-repeat: skretch;"+"-fx-backgound-position: center center;"
-                +"-fx-background-size: cover;" + "-fx-background-color: rgba(0,0,0,0.5);";
+                +"-fx-background-size: cover;";
     }
     public Terminal getTerminal() {
         return this.terminal;
@@ -58,7 +59,4 @@ public class PanelManager {
         return this.stage;
     }
 
-    public GridPane getLayout() {
-        return this.layout;
-    }
 }

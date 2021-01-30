@@ -1,6 +1,5 @@
 package fr.ordinal.terminal;
 
-import fr.ordinal.terminal.file.FileManager;
 import fr.ordinal.terminal.ui.FxApplication;
 import javafx.application.Application;
 

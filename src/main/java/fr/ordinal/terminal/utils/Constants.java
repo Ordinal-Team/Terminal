@@ -9,6 +9,6 @@ public class Constants {
     public static final double MIN_WIDTH = 1080;
     public static final double MIN_HEIGHT = 720;
 
-    public static final JSch J_SCH = new JSch();
+    public static final String USERNAME = System.getProperty("user.name");
 
 }

@@ -14,7 +14,11 @@ public class Terminal {
 
     public void initUI(Stage stage) {
 
-        this.currentFile = new File("C:");
+        if (System.getProperty("os.name").startsWith("win")) {
+            this.currentFile = new File("C:");
+        } else {
+            this.currentFile = new File("/");
+        }
         this.commandRegister = new CommandRegister(this);
         this.commandRegister.registerCommands();
 

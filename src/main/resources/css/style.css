@@ -4,16 +4,13 @@
 }
 
 .styled-text-area .caret {
-    -fx-stroke: white;
+    -fx-stroke: #cb59d7;
 }
 
 .styled-text-area .text{
     -fx-fill:white;
 }
 
-.styled-text-area .line {
-    -fx-fill: black;
-}
 
 .styled-text-area .text.assignment {
     -fx-fill: orange;
